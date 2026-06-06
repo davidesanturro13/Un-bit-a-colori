@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Progetto d&#39;esame</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Un Bit a Colori</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="crt-overlay" aria-hidden="true"></div>
+
+<div id="progress-bar" role="progressbar" aria-label="Progresso lettura" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+<div class="accessibility-panel" role="toolbar" aria-label="Strumenti accessibilità">
+  <span class="accessibility-label" aria-hidden="true">Modalità Daltonismo</span>
+  <button id="toggle-shapes" class="icon-btn" title="Attiva forme simbolo per ogni Console" aria-pressed="false" aria-label="Attiva modalità daltonismo con forme diverse">
+    <i class="fa-solid fa-shapes" aria-hidden="true"></i>
+  </button>
+</div>
+
+<header role="banner">
+  <h1>UN BIT<br><span class="title-accent">A COLORI</span></h1>
+  <p class="header-author" aria-label="Autore">Davide Santurro</p>
+  <div class="header-intro">
+    <!-- MODIFICA: "costi del silicio" → tecnologie più indietro e RAM in KB -->
+    <p>L'analisi esplora come il salto tecnologico dall'architettura a <strong>8-bit</strong> a quella a <strong>16-bit</strong> abbia influenzato non solo la fedeltà visiva, ma anche lo sviluppo e la stratificazione dei generi videoludici.</p>
+    <p>In un'epoca in cui le tecnologie erano ancora nelle prime fasi di sviluppo e le memorie RAM si misuravano in decine o centinaia di kilobyte, le restrizioni hardware hanno stimolato l'ingegno dei programmatori, portandoli a elaborare soluzioni matematiche e visive straordinarie.</p>
+  </div>
+  <div class="header-stats" aria-label="Statistiche del dataset">
+    <div class="h-stat">
+      <span class="h-stat-num">126</span>
+      <span class="h-stat-label">Titoli analizzati</span>
+    </div>
+    <div class="h-stat-divider" aria-hidden="true"></div>
+    <div class="h-stat">
+      <span class="h-stat-num">14</span>
+      <span class="h-stat-label">Anni di storia</span>
+    </div>
+    <div class="h-stat-divider" aria-hidden="true"></div>
+    <div class="h-stat">
+      <span class="h-stat-num">3</span>
+      <span class="h-stat-label">Console a confronto</span>
+    </div>
+  </div>
+  <!-- MODIFICA generale: aggiunta nota sul titolo e sul perimetro temporale dell'analisi -->
+  <p class="header-note">Il titolo evoca la natura binaria delle origini digitali: l'analisi prende avvio dalla <strong>generazione 8-bit</strong> (1983), quando le prime console domestiche definirono il linguaggio visivo dei videogiochi.</p>
+  <a href="#main-content" class="scroll-down" aria-label="Scorri verso il basso per iniziare">
+    <span aria-hidden="true">↓ Scorri per esplorare ↓</span>
+  </a>
+</header>
+
+<main class="main-graphic-container" id="main-content">
+
+  <figure class="sticky-graphic" id="chart-container" aria-label="Grafico interattivo sull'evoluzione cromatica nei videogiochi" role="img">
+    <div id="tooltip" class="tooltip" role="tooltip" aria-live="polite"></div>
+  </figure>
+
+  <article class="scroll-text" aria-label="Testo narrativo">
+
+    <div class="step graphic-step" data-step="1">
+      <div class="glass-card">
+        <div class="card-tag">Capitolo 01</div>
+        <!-- MODIFICA: titolo più specifico per evitare ripetizione -->
+        <h2>Distribuzione Cromatica nel Tempo</h2>
+        <p>Ogni nodo rappresenta uno dei titoli più significativi del periodo. L'asse orizzontale indica l'<strong>anno di pubblicazione</strong> (1983–1997), quello verticale il <strong>numero di colori</strong> renderizzabili a schermo contemporaneamente. La concentrazione dei punti mostra chiaramente il salto generazionale tra la prima metà degli anni Ottanta e il decennio successivo.</p>
+      </div>
+    </div>
+
+    <div class="step intermezzo" data-step="intermezzo">
+      <div class="intermezzo-content glass-card editorial-style">
+        <!-- MODIFICA: aggiunta indicazione periodo storico nel titolo -->
+        <h2 class="editorial-title">L'Universo 8-Bit<br><span class="editorial-subtitle">1983–1989 · Elaborazione Visiva e Vincoli Hardware</span></h2>
+        <!-- MODIFICA: rimosso "spietata" -->
+        <p class="lead-paragraph">In seguito alla saturazione del mercato videoludico del 1983, l'introduzione del <span class="tech-term">Nintendo Entertainment System</span> stabilì un nuovo paradigma industriale. Lo sviluppo software per queste prime architetture domestiche richiedeva una rigorosa ottimizzazione delle risorse.</p>
+
+        <div class="article-stats-bar" role="list" aria-label="Statistiche tecniche NES">
+          <div class="stat-box" role="listitem">
+            <span class="big-number" aria-label="256 colori teorici massimi">256</span>
+            <span class="stat-label">Colori teorici massimi (8-bit)</span>
+          </div>
+          <div class="stat-box" role="listitem">
+            <span class="big-number genesis-color" aria-label="54 colori reali cablati">54</span>
+            <span class="stat-label">Colori reali cablati (NES PPU)</span>
+          </div>
+          <div class="stat-box" role="listitem">
+            <span class="big-number snes-color" aria-label="25 colori simultanei a schermo">25</span>
+            <span class="stat-label">Colori simultanei a schermo</span>
+          </div>
+        </div>
+
+        <div class="z-pattern-container">
+          <div class="z-row">
+            <div class="z-image double-horizontal">
+              <img src="https://pbs.twimg.com/media/C1P95nyWQAEIzEd.jpg" alt="Palette cromatica di Sonic" loading="lazy" />
+              <img src="https://retroshowcase.gr/images/hardware/5/3.png" alt="Schema hardware della PPU del Nintendo Entertainment System" loading="lazy" />
+            </div>
+            <div class="z-text">
+              <h3>La natura del segnale video</h3>
+              <p>Da un punto di vista puramente informatico, un'architettura a 8-bit (come quella strutturata attorno al processore <span class="tech-term">Ricoh 2A03</span> del NES) possiede la capacità matematica di gestire fino a 256 valori numerici distinti. Tuttavia, la visualizzazione di 256 colori a schermo era un'utopia tecnica per l'epoca. Il limite non risiedeva solo nella scarsa quantità di memoria RAM (appena 2 Kilobyte per il sistema), ma nella natura stessa dell'output video.</p>
+              <p>La console elaborava l'immagine tramite una <span class="tech-term">Picture Processing Unit</span> (PPU) progettata per inviare segnali elettrici diretti ai televisori a tubo catodico (<span class="tech-term">CRT</span>). La palette cromatica non era caricata via software, ma era letteralmente cablata all'interno del chip per generare specifiche frequenze del segnale <span class="tech-term">NTSC</span>. Questo riduceva le opzioni a una griglia fissa di soli 54 colori reali, di cui al massimo 25 potevano coesistere nella stessa schermata.</p>
+            </div>
+          </div>
+
+          <div class="scanline-divider" aria-hidden="true"></div>
+
+          <div class="z-row reverse">
+            <div class="z-image">
+              <img src="https://images-cdn.9gag.com/photo/an9vj6L_700b.jpg" alt="Analisi tecnica dello sprite layering in Mega Man" loading="lazy" />
+              <!-- MODIFICA: didascalia con colore più leggibile (gestito in CSS) -->
+              <span class="image-caption">Analisi tecnica: scomposizione dei livelli (layering) degli sprite per aggirare le restrizioni della palette.</span>
+            </div>
+            <div class="z-text">
+              <h3>Strutture a griglia e Sprite Layering</h3>
+              <p>La generazione dell'immagine avveniva posizionando a schermo blocchi di <span class="tech-term">8×8 pixel</span>. Ogni elemento mobile, definito <em>Sprite</em>, era soggetto a restrizioni ferree: non poteva contenere più di tre colori simultanei, più un canale di trasparenza. Questo vincolo strutturale dettò le regole del character design degli anni '80: l'aggiunta di baffi e copricapi serviva a definire i personaggi senza sprecare i tre colori disponibili.</p>
+              <p>Con il progredire della generazione, gli ingegneri idearono lo <span class="tech-term">Sprite Layering</span>. Per superare la soglia dei 3 colori, titoli come <em>Mega Man</em> renderizzavano due sprite distinti e sovrapposti: uno strato base per l'armatura (blu, azzurro, nero) e uno superiore per il volto (rosa, bianco). Questa soluzione contribuiva al noto fenomeno del <span class="tech-term">flickering</span>, ma garantiva una ricchezza visiva prima inaccessibile.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step graphic-step" data-step="2">
+      <div class="glass-card">
+        <div class="card-tag">Capitolo 02</div>
+        <h2>Il Salto Generazionale</h2>
+        <p>I primi anni '90 introducono le architetture a 16-bit. Il grafico evidenzia una netta <strong>ramificazione</strong> nelle capacità hardware: la strategia Nintendo, focalizzata sull'espansione cromatica, si contrappone all'approccio SEGA, orientato verso l'ottimizzazione del processore.</p>
+      </div>
+    </div>
+
+    <div class="step intermezzo" data-step="intermezzo">
+      <div class="intermezzo-content glass-card editorial-style">
+        <!-- MODIFICA: "Filosofie" → "Strategie"; aggiunta periodo storico -->
+        <h2 class="editorial-title">16-Bit<br><span class="editorial-subtitle">1989–1994 · Strategie Tecnologiche a Confronto</span></h2>
+        <p class="lead-paragraph">Il raddoppio del bus dati a <span class="tech-term">16-bit</span> permise alle nuove macchine di elaborare volumi di informazioni esponenzialmente superiori per ogni ciclo di clock. La competizione tra i due colossi si tradusse in architetture grafiche profondamente asimmetriche.</p>
+
+        <div class="z-pattern-container">
+          <div class="z-row">
+            <div class="z-image">
+              <img src="https://i.ytimg.com/vi/_eVAuA8qIVE/maxresdefault.jpg" alt="Confronto del bilanciamento cromatico tra Sega Mega Drive e Super Nintendo" loading="lazy" />
+              <span class="image-caption">Confronto cromatico: palette limitata del Mega Drive vs. palette espansa dello SNES.</span>
+            </div>
+            <div class="z-text">
+              <div class="stats-row" role="list">
+                <div class="stat-box visual-stat" role="listitem">
+                  <!-- MODIFICA: nome console su riga separata per evitare a capo nel nome -->
+                  <span class="big-number genesis-color" aria-label="64 colori su schermo Mega Drive">64</span>
+                  <span class="stat-label">Colori su schermo</span>
+                  <span class="stat-label stat-label-console">(Mega Drive)</span>
+                </div>
+                <div class="stat-box visual-stat" role="listitem">
+                  <span class="big-number snes-color" aria-label="256 colori su schermo SNES">256</span>
+                  <span class="stat-label">Colori su schermo</span>
+                  <span class="stat-label stat-label-console">(SNES)</span>
+                </div>
+              </div>
+              <h3>Elusione dei limiti e Dithering</h3>
+              <p>Il SEGA Mega Drive partiva con una restrizione specifica legata al suo <span class="tech-term">Video Display Processor</span> (VDP), il quale poteva renderizzare solo 64 colori a schermo da una palette di 512. Per compensare questo deficit, SEGA si affidò alla superiore frequenza del <span class="tech-term">Motorola 68000</span>, sfruttando operazioni di trasferimento diretto in memoria (<span class="tech-term">DMA</span>) per saturare lo schermo con livelli multipli di scorrimento in parallasse.</p>
+              <!-- MODIFICA: "fisicamente" → "percettivamente" -->
+              <p>Per arricchire i fondali si ricorse massicciamente alla tecnica del <span class="tech-term">Dithering</span>: pixel di tonalità differenti affiancati a scacchiera venivano fusi percettivamente dai televisori CRT — rimangono distinguibili a distanza ravvicinata, ma la retina percepisce gradienti non presenti nella memoria della console.</p>
+            </div>
+          </div>
+
+          <div class="scanline-divider" aria-hidden="true"></div>
+
+          <div class="z-row reverse">
+            <div class="z-image double-horizontal">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Mode_7_Test-0000.png" alt="Dimostrazione del Mode 7 in Super Mario Kart" loading="lazy" />
+              <img src="https://www.gamegrin.com/assets/Uploads/2019/12/04/screenshot-45.jpg" alt="Donkey Kong Country: grafica ACM pre-renderizzata" loading="lazy" />
+            </div>
+            <div class="z-text">
+              <h3>Sistemi Dedicati e Rendering Pre-calcolato</h3>
+              <p>Il Super Nintendo supportava fino a 256 colori a schermo da uno spettro di oltre 32.000 combinazioni. La sua superiorità si manifestò nell'implementazione hardware del <span class="tech-term">Mode 7</span>: trasformazioni affini — matrici matematiche di rotazione, scalatura e traslazione — applicate a un intero piano di fondo in tempo reale, generando una prospettiva planare che simulava il 3D.</p>
+              <p>Nella fase conclusiva, lo studio Rareware ridefinì i limiti visivi con l'<span class="tech-term">Advanced Computer Modelling</span> (ACM). Utilizzando workstation <em>Silicon Graphics</em> — gli stessi sistemi dell'animazione cinematografica — gli sviluppatori pre-calcolarono modelli 3D compressi in frame 2D, eludendo i limiti di calcolo in tempo reale dello SNES.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step graphic-step" data-step="3">
+      <div class="glass-card">
+        <div class="card-tag">Capitolo 03</div>
+        <h2>L'Evoluzione dei Generi</h2>
+        <p>Le restrizioni strutturali determinavano non solo l'estetica, ma la <strong>progressione del game design</strong>. La lenta diminuzione dei costi di memoria favorì il declino dei titoli arcade, supportando l'affermazione di ecosistemi narrativi persistenti come i Giochi di Ruolo.</p>
+      </div>
+    </div>
+
+    <div class="step intermezzo" data-step="intermezzo">
+      <div class="intermezzo-content glass-card editorial-style">
+        <!-- MODIFICA: aggiunta periodo storico nel sottotitolo -->
+        <h2 class="editorial-title">Gestione della Memoria<br><span class="editorial-subtitle">1990–1997 · Tecniche e Metodi dell'Era 16-bit</span></h2>
+        <p class="lead-paragraph">Il costo di produzione del silicio per le cartucce a sola lettura (<span class="tech-term">ROM</span>) rappresentava il maggiore ostacolo logistico. L'ampliamento della complessità richiedeva l'implementazione di algoritmi di compressione e tecniche di riutilizzo degli asset grafici rigorose.</p>
+
+        <div class="z-pattern-container">
+          <div class="z-row">
+            <div class="z-image">
+              <img src="https://i.ytimg.com/vi/lh6DulFzKU0/maxresdefault.jpg" alt="Dimostrazione del Palette Swapping in Mortal Kombat con i ninja colorati" loading="lazy" />
+              <span class="image-caption">Palette Swapping: manipolazione della Color Lookup Table per generare varianti di personaggio.</span>
+            </div>
+            <div class="z-text">
+              <h3>Economia di silicio: Palette Swapping</h3>
+              <p>Per massimizzare la varietà dei nemici senza esaurire lo spazio in cartuccia (spesso tra 1 e 4 Megabyte totali), l'industria standardizzò il <span class="tech-term">Palette Swapping</span>. L'asset grafico veniva memorizzato una singola volta: invece di un colore definitivo, ogni pixel riceveva un <em>indice numerico</em> collegato a una <span class="tech-term">Color Lookup Table</span> (CLUT) caricata in RAM. Modificando via codice la tabella di riferimento, il sistema ricolorava istantaneamente l'intero sprite.</p>
+              <p>Un esempio scolastico si osserva in <em>Mortal Kombat</em>: Scorpion, Sub-Zero e Reptile condividono il medesimo blocco di dati posizionale, distinguendosi esclusivamente per un puntatore esadecimale alterato nel sorgente.</p>
+              <div class="palette-demo-wrapper" aria-label="Esempio visivo di Palette Swapping">
+                <div class="palette-swatch">
+                  <span class="swatch-color" style="background: #EDB12E;" aria-label="Colore giallo Scorpion, indice esadecimale 0x01"></span>
+                  <span class="swatch-code">#EDB12E (0x01)</span>
+                  <span class="swatch-name">Scorpion</span>
+                </div>
+                <i class="fa-solid fa-arrow-right-arrow-left swap-icon" aria-hidden="true"></i>
+                <div class="palette-swatch">
+                  <span class="swatch-color" style="background: #2E68ED;" aria-label="Colore blu Sub-Zero, indice esadecimale 0x02"></span>
+                  <span class="swatch-code">#2E68ED (0x02)</span>
+                  <span class="swatch-name">Sub-Zero</span>
+                </div>
+                <i class="fa-solid fa-arrow-right-arrow-left swap-icon" aria-hidden="true"></i>
+                <div class="palette-swatch">
+                  <span class="swatch-color" style="background: #2EED4A;" aria-label="Colore verde Reptile, indice esadecimale 0x03"></span>
+                  <span class="swatch-code">#2EED4A (0x03)</span>
+                  <span class="swatch-name">Reptile</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="scanline-divider" aria-hidden="true"></div>
+
+          <div class="z-row reverse">
+            <div class="z-image double-horizontal">
+              <img src="https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000018856/efab9679b2b8b6435b61bf9e7c6456c316f2c40400f41f763380f0fe949557b9" alt="Screenshot di Ultracore, gioco Mega Drive del 1994 pubblicato nel 2019" loading="lazy" />
+              <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000046189/f06f8dc22b97bcbe125aaa458c99330de4c0a173ec6dc0c2dc5eaab2deb041c2" alt="Esempio di pixel art moderna che richiama l'estetica 16-bit" loading="lazy" />
+            </div>
+            <div class="z-text">
+              <!-- MODIFICA: "Retro-estetica" → "estetica retrò" -->
+              <h3>L'eredità del 16-bit e l'estetica retrò</h3>
+              <p>L'architettura grafica del periodo a 16-bit non è stata superata, ma <em>storicizzata</em>. Il caso di <em>Ultracore</em> (progettato nel 1994, pubblicato nel 2019 dopo l'interruzione causata dalla migrazione verso il <span class="tech-term">CD-ROM</span>) evidenzia il perdurante interesse per questo paradigma visivo.</p>
+              <!-- MODIFICA: "atemporale" → "senza tempo" -->
+              <p>Oggi il settore indipendente adotta regolarmente griglie a bassa risoluzione e palette limitate non per restrizioni hardware, ma come precisa grammatica stilistica. L'astrazione formale del <span class="tech-term">pixel design</span> permette di definire chiare priorità di lettura a schermo, dimostrando l'efficacia senza tempo di queste tecniche.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step graphic-step" data-step="4">
+      <div class="glass-card">
+        <div class="card-tag">Capitolo 04</div>
+        <h2>Esplorazione Dinamica</h2>
+        <p>I filtri sottostanti sono <strong>sovrapponibili</strong> (Multi-Select): puoi selezionare più console e generi contemporaneamente per creare query specifiche e osservare le tendenze incrociate nel dataset.</p>
+        <button class="filter-btn main-filter-btn is-active" id="reset-filters" data-filter="all">
+          <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Visualizza Dataset Completo
+        </button>
+        <div class="filter-section">
+          <h3>Filtra per Console</h3>
+          <div class="filter-controls" id="console-filters" role="group" aria-label="Filtri per console"></div>
+        </div>
+        <div class="filter-section">
+          <h3>Filtra per Genere</h3>
+          <div class="filter-controls" id="genre-filters" role="group" aria-label="Filtri per genere"></div>
+        </div>
+      </div>
+    </div>
+
+  </article>
+</main>
+
+<section class="interactive-game-section" aria-labelledby="game-title">
+  <div class="game-container glass-card">
+    <h2 class="game-title" id="game-title">IL COLORE A INCASTRO</h2>
+    <p class="game-instructions">
+      <!-- MODIFICA: obiettivo spostato, hint spazio rimosso -->
+      Sblocca i colori completando le righe. I pezzi partono bianchi e acquistano colore man mano che il punteggio cresce.
+    </p>
+
+    <!-- Keyboard hint: rimosso Space=Drop (Space in realtà non fa drop) -->
+    <div class="keyboard-hint" id="keyboard-hint" aria-label="Controlli da tastiera">
+      <span class="kbd-key">↑</span>
+      <span class="kbd-label">Ruota</span>
+      <span style="color:var(--text-faint);margin:0 4px">·</span>
+      <span class="kbd-key">←</span>
+      <span class="kbd-key">→</span>
+      <span class="kbd-label">Muovi</span>
+      <span style="color:var(--text-faint);margin:0 4px">·</span>
+      <span class="kbd-key">↓</span>
+      <span class="kbd-label">Accelera</span>
+      <span style="color:var(--text-faint);margin:0 4px">·</span>
+      <span class="kbd-key">Space</span>
+      <span class="kbd-label">Pausa</span>
+    </div>
+
+    <div class="game-actions">
+      <!-- MODIFICA: bottone con obiettivo integrato -->
+      <button id="btn-start-pause" class="filter-btn main-filter-btn start-btn">
+        <i class="fa-solid fa-play" aria-hidden="true" id="start-icon"></i>
+        <span id="start-label">Inizia · Raggiungi 200 punti</span>
+      </button>
+    </div>
+
+    <div class="tetris-wrapper">
+      <canvas id="tetrisCanvas" aria-label="Campo di gioco Tetris"></canvas>
+    </div>
+  </div>
+</section>
+
+<section class="methodology-section" aria-labelledby="methodology-heading">
+  <div class="methodology-content glass-card">
+
+    <div class="conclusion-block">
+      <h2 id="methodology-heading">Riflessioni Personali</h2>
+      <!-- MODIFICA: non più in box corsivo; "estream"→"estrema"; "retro"→"retrò"; tolto "proprio";
+           "linguistica"→"grammatica visiva"; aggiunta frase sul fascino personale -->
+      <p class="personal-thoughts">
+        Lo sviluppo di quest'analisi mi ha permesso di osservare la storia dei videogiochi da un punto di vista puramente tecnico, comprendendone tutti i compromessi a cui gli sviluppatori degli anni passati dovevano scendere. Se oggi la scelta di qualsiasi sfumatura cromatica è raggiungibile con estrema semplicità, prima ogni singolo pixel inserito nelle memorie delle console era frutto di ragionamenti per scelte narrative stilistiche. Le intuizioni di quel periodo hanno ancora oggi così valore che molti sviluppatori indipendenti scelgono un ritorno a un'estetica retrò non solo per la sua semplicità, ma come vera scelta di grammatica visiva. Ciò che mi affascina, nonostante la disponibilità di milioni di colori contemporanei, è proprio questa capacità del vincolo di generare creatività: quando ogni bit conta, ogni scelta diventa significativa.
+      </p>
+    </div>
+
+    <hr class="section-divider" aria-hidden="true" />
+
+    <div class="methodology-block">
+      <h2>Metodologia di Analisi</h2>
+      <p><strong>Autore:</strong> Davide Santurro</p>
+      <p><strong>Dati:</strong> I dati utilizzati sono estratti da un dataset di oltre mille giochi, analizzato e ridotto a 126 titoli di riferimento con l'aggiunta del genere, della console e del numero di colori presenti. Il dataset copre i giochi più iconici tra il 1983 e il 1997.</p>
+    </div>
+
+    <div class="sources-block">
+      <h2>Fonti e Riferimenti Dati</h2>
+      <ul class="sources-list">
+        <li><strong>Dataset Originale:</strong> <a href="https://www.kaggle.com/datasets/bhushandivekar/video-game-sales-and-industry-data-1980-2024" target="_blank" rel="noopener">Video Game Sales &amp; Industry Data (1980 - 2024)</a></li>
+        <li><strong>Dataset modificato:</strong> <a href="https://raw.githubusercontent.com/davidesanturro13/progetto-esame-data/refs/heads/main/giochi_arricchiti.csv?v=18" target="_blank" rel="noopener">Rawgithubusercontet</a></li>
+        <li><strong>Documentazione Tecnica SNES/GENESIS:</strong> <a href="https://segaretro.org/Video_Display_Processor" target="_blank" rel="noopener">Sega Retro — VDP</a></li>
+        <li><strong>Asset Grafici:</strong>
+          <ul>
+            <li>Sprite Layering Mega Man: <a href="https://www.spriters-resource.com/" target="_blank" rel="noopener">The Spriters Resource</a></li>
+            <li>Architettura PPU: <a href="https://retroshowcase.gr/" target="_blank" rel="noopener">RetroShowcase Greece</a></li>
+            <li>Immagini: Wikipedia immagini, Retroshowcase, 9GAG, Wikimedia, Gamergrin, Nintendo immagini</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-credit" aria-label="Crediti tecnologie utilizzate">
+      <span>Realizzato con</span>
+      <span class="credit-tag">D3.js</span>
+      <span class="credit-tag">HTML/CSS/JS</span>
+      <span class="credit-tag">Font Awesome</span>
+      <span class="credit-tag">Google Fonts</span>
+    </div>
+
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js'></script><script  src="./script.js"></script>
+
+  </body>
+  
+</html>
